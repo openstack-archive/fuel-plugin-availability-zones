@@ -1,0 +1,4 @@
+class availability_zone (
+
+){
+}
