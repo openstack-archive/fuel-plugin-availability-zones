@@ -1,0 +1,8 @@
+# This task is required for primary-controller node
+- role: ['primary-controller']
+  stage: post_deployment/2000
+  type: puppet
+  parameters:
+    puppet_manifest: puppet/site.pp
+    puppet_modules:  "puppet/modules/:/etc/puppet/modules/"
+    timeout: 360

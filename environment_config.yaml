@@ -1,0 +1,83 @@
+attributes:
+  nb_av:
+    type: "select"
+    weight: 10
+    value: "1"
+    label: "Availibility zones"
+    description: "Number of availibility zones"
+    values:
+      - data: "1"
+        label: "1"
+      - data: "2"
+        label: "2"
+      - data: "3"
+        label: "3"
+      - data: "4"
+        label: "4"
+  label_availability_zones_1:
+    label: "Zone 1 name"
+    description: "Name of availability zone 1"
+    value: "Zone_1"
+    weight: 11
+    type: "text"
+  availability_zones_1:
+    value: ""
+    label: "Zone 1"
+    description: "List of compute node fqdn members of availability zone 1 (comma separated)"
+    weight: 12
+    type: "text"
+  label_availability_zones_2:
+    label: "Zone 2 name"
+    description: "Name of availability zone 2"
+    value: "Zone_2"
+    weight: 13
+    type: "text"
+    restrictions:
+      - condition: "settings:availability_zones.nb_av.value != '2' and settings:availability_zones.nb_av.value != '3' and settings:availability_zones.nb_av.value != '4'"
+        action: "hide"
+  availability_zones_2:
+    value: ""
+    label: "Zone 2"
+    description: "List of compute node fqdn members of availability zone 2 (comma separated)"
+    weight: 14
+    type: "text"
+    restrictions:
+      - condition: "settings:availability_zones.nb_av.value != '2' and settings:availability_zones.nb_av.value != '3' and settings:availability_zones.nb_av.value != '4'"
+        action: "hide"
+  label_availability_zones_3:
+    label: "Zone 3 name"
+    description: "Name of availability zone 3"
+    value: "Zone_3"
+    weight: 15
+    type: "text"
+    restrictions:
+      - condition: "settings:availability_zones.nb_av.value != '3' and settings:availability_zones.nb_av.value != '4'"
+        action: "hide"
+  availability_zones_3:
+    value: ""
+    label: "Zone 3"
+    description: "List of compute node fqdn members of availability zone 3 (comma separated)"
+    weight: 16
+    type: "text"
+    restrictions:
+      - condition: "settings:availability_zones.nb_av.value != '3' and settings:availability_zones.nb_av.value != '4'"
+        action: "hide"
+  label_availability_zones_4:
+    label: "Zone 4 name"
+    description: "Name of availability zone 4"
+    value: "Zone_4"
+    weight: 17
+    type: "text"
+    restrictions:
+      - condition: "settings:availability_zones.nb_av.value != '4'"
+        action: "hide"
+  availability_zones_4:
+    value: ""
+    label: "Zone 4"
+    description: "List of compute node fqdn members of availability zone 4 (comma separated)"
+    weight: 18
+    type: "text"
+    restrictions:
+      - condition: "settings:availability_zones.nb_av.value != '4'"
+        action: "hide"
+
