@@ -26,19 +26,19 @@ define add_host_zone2 {
     command	=> "/bin/bash -c 'source /root/openrc && /usr/bin/nova aggregate-add-host $label_zone_2 $name'",
     unless  => "/bin/bash -c 'source /root/openrc && /usr/bin/nova aggregate-details $label_zone_2 | /bin/egrep \"$name\"'",
   }
-} 
+}
 define add_host_zone3 {
   exec { "processing $name":
     command	=> "/bin/bash -c 'source /root/openrc && /usr/bin/nova aggregate-add-host $label_zone_3 $name'",
     unless  => "/bin/bash -c 'source /root/openrc && /usr/bin/nova aggregate-details $label_zone_3 | /bin/egrep \"$name\"'",
   }
-} 
+}
 define add_host_zone4 {
   exec { "processing $name":
     command	=> "/bin/bash -c 'source /root/openrc && /usr/bin/nova aggregate-add-host $label_zone_4 $name'",
     unless  => "/bin/bash -c 'source /root/openrc && /usr/bin/nova aggregate-details $label_zone_4 | /bin/egrep \"$name\"'",
   }
-}   
+}
 
 exec{ "Create $label_zone_1 zone":
 command => "/bin/bash -c 'source /root/openrc && /usr/bin/nova aggregate-create $label_zone_1 $label_zone_1'",
@@ -63,14 +63,10 @@ if $nb_av > 2 {
 add_host_zone3 { $array_zone_3 : }
  }
 
-if $nb_av > 3 { 
+if $nb_av > 3 {
   exec{ "Create $label_zone_4 zone":
   command => "/bin/bash -c 'source /root/openrc && /usr/bin/nova aggregate-create $label_zone_4 $label_zone_4'",
   unless  => "/bin/bash -c 'source /root/openrc && /usr/bin/nova aggregate-list | /bin/egrep \"$label_zone_4\"'",
   } ->
 add_host_zone4 { $array_zone_4 : }
 }
-  
-
-
-
