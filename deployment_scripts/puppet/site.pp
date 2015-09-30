@@ -1,0 +1,1 @@
+class { 'availability_zones':}
