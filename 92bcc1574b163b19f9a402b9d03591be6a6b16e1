@@ -1,0 +1,8 @@
+Verified+2: Jenkins
+Code-Review+2: Samuel BARTEL <samuel.bartel@orange.com>
+Workflow+1: Samuel BARTEL <samuel.bartel@orange.com>
+Submitted-by: Jenkins
+Submitted-at: Fri, 02 Oct 2015 07:35:37 +0000
+Reviewed-on: https://review.openstack.org/229370
+Project: stackforge/fuel-plugin-availability-zones
+Branch: refs/heads/master
