@@ -1,0 +1,9 @@
+Code-Review+1: venkatamahesh <venkatamaheshkotha@gmail.com>
+Code-Review+2: Samuel BARTEL <samuel.bartel@orange.com>
+Workflow+1: Samuel BARTEL <samuel.bartel@orange.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 02 Feb 2016 22:40:47 +0000
+Reviewed-on: https://review.openstack.org/258870
+Project: openstack/fuel-plugin-availability-zones
+Branch: refs/heads/master
