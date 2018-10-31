@@ -8,7 +8,7 @@ Overview
 --------
 Openstack can configure availability zones as logical groups for compute nodes, this plugin allow to configure from 1 to 4 availability zones
 
-This repo contains all necesary files to build availability-zones Fuel plugin.
+This repo contains all necessary files to build availability-zones Fuel plugin.
 
 Requirements
 ------------
@@ -73,7 +73,7 @@ availability-zones plugin configuration
 
 1. Create a new environment with the Fuel UI wizard
 
-2. Add multiples nodes with the "Compute" role.
+2. Add multiples nodes with the "Compute" role
 
 3. Click on the settings tab of the Fuel web UI
 
